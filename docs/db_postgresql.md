@@ -1,5 +1,7 @@
 # Database: PostgreSQL
+
 Here is an example of the basic Docker Compose config (`docker-compose.yml`):
+
 ```yaml
 version: "2"
 
@@ -8,8 +10,8 @@ services:
     image: git.lcomrade.su/root/lenpaste:latest
     restart: always
     environment:
-      - LENPASTE_DB_DRIVER=postgres
-      - LENPASTE_DB_SOURCE=postgres://lenpaste:pass@postgres/lenpaste?sslmode=disable
+      - WASTEBIN_DB_DRIVER=postgres
+      - WASTEBIN_DB_SOURCE=postgres://lenpaste:pass@postgres/lenpaste?sslmode=disable
     volumes:
       - "${PWD}/data:/data"
       - "/etc/timezone:/etc/timezone:ro"
